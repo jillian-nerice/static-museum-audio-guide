@@ -19,8 +19,11 @@ twitter_username: acmilabs
 github_username:  jillian-nerice
 menu_heading: "Select another stop"
 index_page_text: "Select an audio guide stop to begin."
-headphones_icon_color: "/assets/img/icons/headphones-dark.png"
+headphones_icon_dark: "/assets/img/icons/headphones-dark.png"
 headphones_icon_light: "/assets/img/icons/headphones-light.png"
+headphones_icon_green: "/assets/img/icons/headphones-green.png"
+headphones_icon_red: "/assets/img/icons/headphones-red.png"
+
 
 # Build settings
 markdown: kramdown
