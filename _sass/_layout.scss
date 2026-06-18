@@ -306,44 +306,33 @@
 .page-heading {
     font-size: 20px;
 }
-
 .post-list {
     margin-left: 0;
     list-style: none;
-    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // 3 per row
+    gap: 15px;
+    justify-items: centre;
 
     li {
-        display: inline-block;
-        margin: 0;
+        display: block;
         line-height: 0;
+
         a {
-            margin: 5px;
+            margin: 0;
             background-color: $tile-bgcolor;
             background-size: 100%;
             color: $tile-color;
-            width: $tile-size-large;
-            height: $tile-size-large;
-            display: inline-block;
-            font-size: 20px;
-            //width: $spacing-unit * 3;
-            //height: $spacing-unit * 3;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: centre;
+            justify-content: centre;
             border-radius: $tile-border-radius;
-            position: relative;
-            padding: 0;
-            &:hover, &:active, &:focus {
-                background-color: lighten($tile-bgcolor, 10%);
-            }
-            @include media-query($on-palm) {
-                width: $tile-size;
-                height: $tile-size;
-            }
         }
-        text-align: center;
-        vertical-align: center;
     }
 }
-
-
 
 .post-meta {
     font-size: $small-font-size;
@@ -356,13 +345,16 @@
 }
 
 .post-item {
-    text-align: center;
-    line-height: 0;
+    text-align: centre;
+    line-height: 1;
+    margin: 0;
+    font-size: 24px;
+}
+
+.post-item small {
     display: block;
-    margin-top: $tile-size-large / 2;
-    @include media-query($on-palm) {
-        margin-top: $tile-size / 2;
-    }    
+    font-size: 12px;
+    margin-top: 5px;
 }
 
 
@@ -473,7 +465,14 @@
         }
     }
 }
+.post-list li a {
+    transition: 0.2s;
+}
 
+.post-list li a:hover {
+    transform: scale(1.05);
+    background-color: lighten($tile-bgcolor, 10%);
+}
 /*********************************************
 Hero images on audio guide stop pages
 *********************************************/
