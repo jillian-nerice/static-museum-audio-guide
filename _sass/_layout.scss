@@ -305,34 +305,16 @@
 
 .page-heading {
     font-size: 20px;
-}
-.post-list {
-    margin-left: 0;
+}.post-list {
     list-style: none;
+    margin: 0;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // 3 per row
-    gap: 15px;
-    justify-items: centre;
-
-    li {
-        display: block;
-        line-height: 0;
-
-        a {
-            margin: 0;
-            background-color: $tile-bgcolor;
-            background-size: 100%;
-            color: $tile-color;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: centre;
-            justify-content: centre;
-            border-radius: $tile-border-radius;
-        }
-    }
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0;
 }
+
 
 .post-meta {
     font-size: $small-font-size;
@@ -345,17 +327,17 @@
 }
 
 .post-item {
-    text-align: centre;
-    line-height: 1;
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 1.2;
 }
 
 .post-item small {
-    display: block;
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 4px;
+    display: block;
 }
+
 
 
 /********************
@@ -465,14 +447,38 @@
         }
     }
 }
+.post-list li {
+    display: block;
+}
+
 .post-list li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: centre;
+    align-items: centre;
+
+    background-color: $tile-bgcolor;
+    border-radius: 8px;
+
+    height: 110px;   
+    width: 100%;
+
+    text-align: centre;
+    text-decoration: none;
+
+    padding: 10px;
     transition: 0.2s;
 }
 
 .post-list li a:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     background-color: lighten($tile-bgcolor, 10%);
 }
+
+.post-list li:first-child {
+    grid-column: span 2;
+}
+
 /*********************************************
 Hero images on audio guide stop pages
 *********************************************/
