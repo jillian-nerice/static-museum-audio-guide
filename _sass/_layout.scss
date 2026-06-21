@@ -330,15 +330,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 
-    margin-top: 8px;
+    margin-top: 10px;
     text-align: center;
 }
 
 .post-item small {
     font-size: 12px;
-    margin-top: 4px;
+    margin-top: 0px;
     display: inline;
 }
 
@@ -455,6 +455,8 @@
     display: block;
 }
 .post-list li a {
+
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -469,6 +471,7 @@
     text-decoration: none;
 
     transition: 0.2s;
+ 
 }
 .post-list li a img {
     width: 100%;
@@ -477,9 +480,10 @@
     border-radius: 8px;
 }
 
-.post-list li a img:hover {
+.post-list li a:hover {
     transform: scale(1.03);
 }
+
 
 
 .post-list li:first-child {
