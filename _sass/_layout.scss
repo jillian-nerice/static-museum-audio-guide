@@ -452,8 +452,10 @@
 }
 
 .post-list li a {
-    background-size
-    background-position
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     display: flex;
     flex-direction: column;
