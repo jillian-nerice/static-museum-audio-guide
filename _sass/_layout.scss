@@ -327,15 +327,19 @@
 }
 
 .post-item {
-    margin: 0;
-    font-size: 22px;
-    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 8px;
+    text-align: center;
 }
 
 .post-item small {
     font-size: 12px;
     margin-top: 4px;
-    display: block;
+    display: inline;
 }
 
 
@@ -450,36 +454,33 @@
 .post-list li {
     display: block;
 }
-
 .post-list li a {
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    background-color: $tile-bgcolor;
     color: black;
     border-radius: 8px;
 
-    height: 130px;   
     width: 100%;
 
     text-align: center;
     text-decoration: none;
 
-    padding: 10px;
     transition: 0.2s;
 }
-
-.post-list li a:hover {
-    transform: scale(1.03);
-    background-color: lighten($tile-bgcolor, 10%);
+.post-list li a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
 }
+
+.post-list li a img:hover {
+    transform: scale(1.03);
+}
+
 
 .post-list li:first-child {
     grid-column: span 2;
