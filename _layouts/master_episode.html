@@ -34,11 +34,14 @@
         </p>
       </div>
 
-      {% if page.audio_file != null %}
+      {% if page.audio_file_en != null %}
       <div id="jquery_jplayer_1" class="jp-jplayer"></div>
       <div id="episode-element">
-        <audio>
-          <source id="episode-source" src="{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file }}" type="audio/mpeg">
+        <audio>     
+      <source
+        id="episode-source"
+        src="{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}"
+        type="audio/mpeg"> 
         Your browser does not support the audio element.
         </audio>
       </div>
@@ -68,7 +71,7 @@
           {% endfor %}
         </div>
 
-        {% if page.audio_file != null %}
+        {% if page.audio_file_en != null %}
         <div class="jp-controls" style="display: inline-block; text-align: center;">
           <button class="jp-play" role="button" tabindex="0" style="display: inline-block;"></button>
         </div>
