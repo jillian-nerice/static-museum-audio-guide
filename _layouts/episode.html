@@ -6,24 +6,38 @@ layout: master_episode
 
   <header class="post-header">
     <div class="post-title-episode">
-      <div class="post-header-stop-id" style="background-image: url('{{ site.baseurl }}{{ site.headphones_icon_dark }}');">
+
+      <div
+        class="post-header-stop-id"
+        style="background-image: url('{{ site.baseurl }}{{ site.headphones_icon_dark }}');"
+      >
         <span>{{ page.stop_id }}</span>
       </div>
 
-      {% if page.section_title != null %}
-        <h2 class="post-header-section-title">{{ page.section_title }}</h2>
-      {% endif %}
+      <h2
+        class="post-header-section-title"
+        id="section-title"
+      >
+        {{ page.section_title }}
+      </h2>
 
-      {% if page.title != null %}
-        <h3 class="post-header-title">{{ page.title }}</h3>
-      {% endif %}
+      <h3
+        class="post-header-title"
+        id="page-title"
+      >
+        {{ page.title }}
+      </h3>
+
     </div>
   </header>
 
   {% if page.image != null %}
     <div class="post-hero-image-container">
       <div class="post-hero-image">
-        <img src="{{ site.baseurl }}{{ page.image }}" alt="">
+        <img
+          src="{{ site.baseurl }}{{ page.image }}"
+          alt=""
+        >
       </div>
     </div>
   {% endif %}
