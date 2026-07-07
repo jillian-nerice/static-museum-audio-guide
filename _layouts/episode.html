@@ -51,3 +51,30 @@ layout: master_episode
   </div>
 
 </article>
+
+<script>
+
+function setLanguage(lang) {
+
+  localStorage.setItem("language", lang);
+
+  document.querySelectorAll(".lang-en").forEach(el => {
+    el.style.display = (lang === "en") ? "block" : "none";
+  });
+
+  document.querySelectorAll(".lang-tl").forEach(el => {
+    el.style.display = (lang === "tl") ? "block" : "none";
+  });
+
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const lang = localStorage.getItem("language") || "en";
+
+  setLanguage(lang);
+
+});
+
+</script>
+
