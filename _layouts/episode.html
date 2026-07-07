@@ -66,6 +66,23 @@ function setLanguage(lang) {
     el.style.display = (lang === "tl") ? "block" : "none";
   });
 
+  const source = document.getElementById("episode-source");
+
+  if (source) {
+
+    if (lang === "en") {
+      source.src =
+        "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_en }}";
+    } else {
+      source.src =
+        "{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file_tl }}";
+    }
+
+    const audio = source.parentElement;
+
+    audio.pause();
+    audio.load();
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
